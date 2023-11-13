@@ -1,0 +1,92 @@
+.aboutContainer {
+  margin-top: 150px;
+}
+
+.divColor {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55vh;
+  background: linear-gradient(45deg, #0051ff, #008cff);
+  box-shadow: 1px 5px 10px #00000070;
+  z-index: -1;
+}
+
+.title {
+  text-align: center;
+  margin: 100px 0;
+  color: #fff;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  width: 100%;
+  background-color: #ccc;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 15px #00000081;
+}
+
+.paragsAndImg {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.parags {
+  width: 60%;
+  text-align: justify;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1em;
+}
+
+.image {
+  width: 40%;
+  margin: 10px;
+  border: 2px solid #0051ff;
+  border-radius: 5px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+}
+
+.socials svg {
+  margin: 0 10px;
+  transition: .4s;
+  color: #777;
+  transition: .4s;
+}
+
+.socials svg:hover {
+  color: #777;
+}
+
+@media (max-width: 900px) {
+  .paragsAndImg {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .parags {
+    order: 1;
+    max-width: 500px;
+    width: 100%;
+    padding: 15px 25px;
+  }
+
+  .image {
+    order: 0;
+    max-width: 500px;
+    width: 100%;
+  }
+}

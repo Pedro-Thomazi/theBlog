@@ -1,0 +1,183 @@
+.publication {
+  background-color: #ddd;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.pricipal {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricipal .title {
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.text {
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.qtdComments {
+  display: flex;
+  justify-content: space-between;
+}
+
+.qtdComments div {
+  display: flex;
+}
+
+.qtdComments div #trash {
+  color: #ee1221;
+}
+
+.qtdComments div #pencil {
+  color: green;
+}
+
+.qtdComments svg {
+  margin-right: 10px;
+  transition: .4s;
+  cursor: pointer;
+}
+
+
+.qtdComments div #trash:hover {
+  color: #57080d;
+}
+
+.qtdComments div #pencil:hover {
+  color: rgb(0, 66, 0);
+}
+
+.configs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px;
+  font-size: 1.2em;
+}
+
+.configs a {
+  font-weight: bold;
+  color: #000;
+  transition: .4s;
+}
+.configs a:hover {
+  color: #24b7ca;
+}
+
+.configs a span {
+  color: #777;
+}
+
+
+/* Comments */
+.comments {
+  display: none;
+  border-top: 1px solid #000;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.comments.active {
+  display: block;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 20px 10px;
+  border: 2px solid #aaa;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.comment footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment footer svg {
+  cursor: pointer;
+}
+
+.comment .dateComment {
+  align-self: flex-end;
+  font-size: 1.2em;
+}
+
+.userComment {
+  display: flex;
+  align-items: center;
+}
+
+.userComment img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userComment a {
+  color: #000;
+}
+
+.textComment {
+  margin-top: 20px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+
+/* Add comment */
+.addComment {
+  background-color: #555;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.formComment {
+  display: flex;
+  flex-direction: column;
+}
+
+.formComment textarea {
+  background-color: transparent;
+  margin-bottom: 20px;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.btnComment {
+  background-color: #006eff;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 10px 0;
+  font-size: 1.3em;
+  transition: .4s;
+  text-align: center;
+}
+
+a.btnComment {
+  background-color: #5fa4ff;
+}
+
+.btnComment:hover {
+  background-color: transparent;
+  color: #006eff;
+  border-color: #006eff;
+  border-radius: 10px;
+}
+
+a.btnComment:hover {
+  color: #57080d;
+  border-color: #57080d;
+}

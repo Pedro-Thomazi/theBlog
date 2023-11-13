@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 650px;
+  width: 100%;
+  background-color: #fff;
+  margin: 0 10px;
+}
+
+.container header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.container header svg {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.form .content,
+.form .content .name {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.3em;
+}
+
+.form .content fieldset {
+  border: 1px solid #000;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form .content fieldset input.woman {
+  margin-left: 10px;
+}
+
+.form .content fieldset input, 
+.form .content fieldset label {
+  cursor: pointer;
+}
+
+.form .content input {
+  outline: none;
+  border-radius: 5px;
+}
+
+.rail {
+  background-color: #4d4d4d;
+  width: 100px;
+  height: 50px;
+  border-radius: 150px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.rail .indicator {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: scale(.9);
+  position: absolute;
+  left: 0;
+  transition: .4s;
+}

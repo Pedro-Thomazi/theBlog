@@ -1,0 +1,33 @@
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #eee;
+  /* padding-bottom: 1000px; */
+}
+
+.btnSign {
+  background-color: #00a2ff;
+  padding: 15px 0;
+  font-size: 1.4em;
+  width: 300px;
+  border: 1px solid transparent;
+  color: #fff;
+  border-radius: 5px;
+  transition: .4s;
+  margin: 10px 0;
+}
+
+.btnSign:hover {
+  border-color: #00a2ff;
+  color: #00a2ff;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}

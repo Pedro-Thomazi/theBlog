@@ -1,0 +1,65 @@
+#headerContainer {
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  /* background-color: red; */
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials svg {
+  margin: 0 10px;
+  transition: .4s;
+  color:#aaa;
+  transition: .4s;
+}
+
+.socials svg:hover {
+  color: #777;
+}
+
+@media (max-width: 760px) {
+  .socials {
+    display: none;
+  }
+}
+
+.name {
+  font-size: 1.4em;
+  background-color: #aaa;
+  padding: 7px 11px;
+  border-radius: 7px;
+}
+
+.name span {
+  font-weight: 600;
+}
+
+@media (max-width: 1110px) {
+  .logo {
+    display: none;
+  }
+
+  .name {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 800px) {
+  .socials {
+    display: none;
+  }
+
+  .container {
+    justify-content: center;
+  }
+}

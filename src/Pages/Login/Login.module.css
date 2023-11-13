@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@700&display=swap');
+
+.loginContainer {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.formContainer {
+  margin: 100px 10px;
+  background: linear-gradient(45deg, #bbb, #777);
+  padding: 10px 40px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  height: 600px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.form h2 {
+  margin: 20px 0;
+  font-size: 2.3em;
+  font-family: 'Edu TAS Beginner', cursive;
+  color: #fff;
+}
+
+.form .content {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.form div input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  padding: 10px;
+  outline: none;
+  color: #fff;
+}
+
+.form div label { 
+  position: absolute;
+  /* transform: translateY(-50%); */
+  top: 10px;
+  left: 0px;
+  pointer-events: none;
+  padding: 0 8px;
+  border-radius: 5px;
+  color: #fff;
+  transition: .4s;
+}
+
+
+.form div input:focus ~ label, 
+.form div input:valid ~ label {
+  top: -15px;
+}
+
+
+.linkSignUp {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.linkSignUp p {
+  margin: 0;
+}

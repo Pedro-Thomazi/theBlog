@@ -1,0 +1,188 @@
+.containerDashboard {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+}
+
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.user#userMan {
+  background-color: #0066ff;
+}
+
+.user#userWoman {
+  background-color: #cc00ff;
+}
+
+.user#null {
+  background-color: rgb(136, 136, 136);
+}
+
+.user img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 20px;
+  transition: .4s;
+}
+
+.configsUser {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  padding: 10px;
+}
+
+.btnHamb {
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.inputHidden {
+  display: none;
+}
+
+.follow {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.follow span {
+  margin-right: 20px;
+}
+
+.userList {
+  position: fixed;
+  background-color: #44444485;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  /* display: none; */
+}
+
+.userList.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.list {
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  width: 300px;
+  transition: .4s;
+  transform: translateX(-100%);
+}
+
+.userList.active .list {
+  transform: translateX(0%);
+}
+
+.btnOptions {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 0;
+  font-size: 1.4em;
+  transition: .4s;
+}
+
+.btnOptions:hover {
+  background-color: #999;
+  color: #000;
+}
+
+.btnOptions#exit,
+.btnOptions#btnClose {
+  color: #ee2314;
+}
+
+a.btnOptions {
+  text-align: center;
+}
+
+.btnOptions#exit svg {
+  margin-right: 10px;
+}
+
+.btnOptions#exit:hover,
+.btnOptions#btnClose:hover {
+  background-color: #ee2314;
+  color: #000;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #ccc;
+}
+
+
+/* Update Card */
+#containerUpdate {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000042;
+  opacity: 0;
+  pointer-events: none;
+  transition: .4s;
+}
+
+#containerUpdate.activeUser {
+  opacity: 1;
+  color: #000;
+  pointer-events: all;
+}
+
+#updateCard {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonClose {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  cursor: pointer;
+}
+
+
+/* media */
+@media (max-width: 840px) {
+  .user img {
+    width: 150px;
+    height: 150px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 593px) {
+  .user {
+    align-items: center;
+    flex-direction: column;
+  }
+}
