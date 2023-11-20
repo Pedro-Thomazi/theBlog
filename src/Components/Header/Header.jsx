@@ -19,46 +19,49 @@ import { UserAuth } from '../../Context/AuthContext'
 const Header = () => {
   const { user } = UserAuth()
 
-  return (
-    <header className="container-fluid" id={styles.headerContainer}>
-      <div className={styles.container}>
-        <Link to='/' className={styles.logo}>
-          <img src={logo} alt="Logo The Blog" />
-        </Link>
+  const url = window.location.pathname
 
-        <div className={styles.navbarContainer}>
-          <Navbar />
+  if (url !== '/continuation') {
+    return (
+      <header className="container-fluid" id={styles.headerContainer}>
+        <div className={styles.container}>
+          <Link to='/' className={styles.logo}>
+            <img src={logo} alt="Logo The Blog" />
+          </Link>
+
+          <div className={styles.navbarContainer}>
+            <Navbar />
+          </div>
+
+          <div className={styles.socials}>
+            {user && (
+              user?.displayName ? (
+                <p className={styles.name}>Olá, <span>{user.displayName}</span></p>
+              ) : (
+                <p className={styles.name}>Olá, <span>{user.email}</span></p>
+              )
+            )}
+            {!user && (
+              <>
+                <Link to='/'>
+                  <BsFacebook size={25} />
+                </Link>
+                <Link to='/'>
+                  <BsYoutube size={25} />
+                </Link>
+                <Link to='/'>
+                  <BsTwitter size={25} />
+                </Link>
+                <Link to='/'>
+                  <BsLinkedin size={25} />
+                </Link>
+              </>
+            )}
+          </div>
         </div>
-
-        <div className={styles.socials}>
-          {user && (
-            user?.displayName ? (
-              <p className={styles.name}>Olá, <span>{user.displayName}</span></p>
-            ) : (
-              <p className={styles.name}>Olá, <span>{user.email}</span></p>
-            )
-          )}
-          {!user && (
-            <>
-              <Link to='/'>
-                <BsFacebook size={25} />
-              </Link>
-              <Link to='/'>
-                <BsYoutube size={25} />
-              </Link>
-              <Link to='/'>
-                <BsTwitter size={25} />
-              </Link>
-              <Link to='/'>
-                <BsLinkedin size={25} />
-              </Link>
-            </>
-          )}
-        </div>
-
-      </div>
-    </header>
-  )
+      </header>
+    )
+  }
 }
 
 export default Header

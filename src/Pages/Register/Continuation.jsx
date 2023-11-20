@@ -29,6 +29,7 @@ const Continuation = () => {
     })
 
     navigate('/')
+    window.location.reload()
   }
 
 

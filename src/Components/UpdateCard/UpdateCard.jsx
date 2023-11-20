@@ -2,7 +2,7 @@
 import styles from './UpdateCard.module.css'
 
 // React
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 // UserAuth
 import { UserAuth } from '../../Context/AuthContext'
@@ -27,17 +27,6 @@ const UpdateCard = ({id}) => {
       console.log(error.message)
     }
   }
-
-  // useEffect(() => {
-  //   const rail = document.querySelector('.rail')
-  //   const body = document.querySelector('body')
-
-  //   rail.addEventListener('onClick', () => {
-  //     rail.classList.toggle('dark')
-  //     body.classList.toggle('dark')
-  //   })
-  // } ,[])
-
 
   return (
     <div className={styles.container}>
