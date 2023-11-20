@@ -2,11 +2,11 @@
 import styles from './UpdateCard.module.css'
 
 // React
-import {  useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // UserAuth
 import { UserAuth } from '../../Context/AuthContext'
-import { doc, updateDoc } from 'firebase/firestore'
+import { collection, doc, onSnapshot, query, updateDoc } from 'firebase/firestore'
 import { db } from '../../Firebase/Firebase'
 
 
@@ -14,7 +14,8 @@ const UpdateCard = ({id}) => {
   const [name, setName] = useState('')
   const [gender, setGender] = useState('')
   const [maritalStatus, setMaritalStatus] = useState('')
-  const { updateUser } = UserAuth()
+  // const [userConfigs, setUserConfigs] = useState([])
+  const { user, updateUser } = UserAuth()
 
   const handleUpdate = async (e) => {
     e.preventDefault()
@@ -30,6 +31,22 @@ const UpdateCard = ({id}) => {
     }
   }
 
+  // useEffect(() => {
+  //   // User Firebase
+  //   const qUser = query(collection(db, 'users'))
+  //   const unsubscribeUser = onSnapshot(qUser, (queryUser) => {
+  //     let userConfigs = []
+  //     queryUser.forEach((doc) => {
+  //       const data = doc.data()
+  //       if (data.id && data.id === user.uid) {
+  //         userConfigs.push({ ...data, id: doc.id })
+  //       }
+  //     })
+  //     setUserConfigs(userConfigs)
+  //   })
+  //   return () => unsubscribeUser()
+  // }, [])
+
   return (
     <div className={styles.container}>
       <header>
@@ -40,7 +57,7 @@ const UpdateCard = ({id}) => {
         <div className={styles.content}>
           <div className={styles.name}>
             <label>Nome</label>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+            <input type="text" value={name} placeholder={user.displayName} onChange={(e) => setName(e.target.value)} />
           </div>
           <fieldset>
             <legend>Sexo</legend>
