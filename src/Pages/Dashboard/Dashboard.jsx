@@ -83,7 +83,7 @@ const Dashboard = () => {
     }
   }, [])
 
-  console.log(userConfigs)
+  console.log(userConfigs[0]?.maritalStatus === undefined)
 
 
   return (
@@ -152,6 +152,10 @@ const Dashboard = () => {
           <PublicationCard item={item} key={id} />
         ))}
       </section>
+
+      {((userConfigs[0]?.gender === '' || userConfigs[0]?.gender === undefined) || (userConfigs[0]?.maritalStatus === '' || userConfigs[0]?.maritalStatus === undefined)) && (
+        <span onClick={openUpdateCard} className={styles.updateDashboard}>Atualize Seu Perfil</span>
+      )}
     </main>
   )
 }

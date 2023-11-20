@@ -187,3 +187,38 @@ a.btnOptions {
     flex-direction: column;
   }
 }
+
+
+
+
+/* Atualize perfil */
+.updateDashboard {
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  background-color: rgb(255, 30, 0);
+  color: #fff;
+  font-size: 1.2em;
+  padding: 20px 50px;
+  border-radius: 10px;
+  animation: alert 1s infinite ;
+  cursor: pointer;
+}
+
+@keyframes alert {
+  0% {
+    background-color: rgb(255, 30, 0);
+    color: #fff;
+  }
+
+  90% {
+    background-color: #fff;
+    color: #ee2314;
+    transform: scale(1.1);
+  }
+
+  100% {
+    background-color: rgb(255, 30, 0);
+    color: #fff;
+  }
+}
