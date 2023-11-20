@@ -2,7 +2,7 @@
 import styles from './UpdateCard.module.css'
 
 // React
-import { useState } from 'react'
+import {  useState } from 'react'
 
 // UserAuth
 import { UserAuth } from '../../Context/AuthContext'
@@ -13,6 +13,7 @@ import { db } from '../../Firebase/Firebase'
 const UpdateCard = ({id}) => {
   const [name, setName] = useState('')
   const [gender, setGender] = useState('')
+  const [maritalStatus, setMaritalStatus] = useState('')
   const { updateUser } = UserAuth()
 
   const handleUpdate = async (e) => {
@@ -20,7 +21,8 @@ const UpdateCard = ({id}) => {
 
     try {
       await updateDoc(doc(db, 'users', id), {
-        gender: gender
+        gender: gender,
+        maritalStatus: maritalStatus
       })
       await updateUser(name)
     } catch (error) {
@@ -54,6 +56,27 @@ const UpdateCard = ({id}) => {
               type="radio"
               name="sexo"
               id="woman" /> <label htmlFor="woman">Feminino</label>
+          </fieldset>
+          <fieldset>
+            <legend>Estado civil</legend>
+            <input onChange={(e) => setMaritalStatus(e.target.value)}
+              value='Casado'
+              type="radio"
+              name="maritalStatus"
+              id="married" /> <label htmlFor="married">Casado</label>
+
+            <input onChange={(e) => setMaritalStatus(e.target.value)}
+              value='Solteiro'
+              className={styles.woman}
+              type="radio"
+              name="maritalStatus"
+              id="single" /> <label htmlFor="single">Solteiro</label>
+            <input onChange={(e) => setMaritalStatus(e.target.value)}
+              value='Viúvo'
+              className={styles.woman}
+              type="radio"
+              name="maritalStatus"
+              id="widower" /> <label htmlFor="widower">Viúvo</label>
           </fieldset>
           {/* <div>
             <label>darkMode</label>

@@ -83,6 +83,8 @@ const Dashboard = () => {
     }
   }, [])
 
+  console.log(userConfigs)
+
 
   return (
     <main className={styles.containerDashboard}>
@@ -130,6 +132,7 @@ const Dashboard = () => {
           </div>
 
           <div className={styles.follow}>
+            <span>Estado Civil: {userConfigs[0]?.maritalStatus}</span>
             {/* <span>Seguindo 0</span>
             <span>Seguidores 0</span> */}
           </div>

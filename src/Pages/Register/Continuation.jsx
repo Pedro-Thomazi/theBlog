@@ -25,6 +25,7 @@ const Continuation = () => {
       followers: 0,
       following: 0,
       gender: '',
+      maritalStatus: '',
       darkMode: false
     })
 
