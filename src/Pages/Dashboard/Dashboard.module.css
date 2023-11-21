@@ -136,6 +136,7 @@ a.btnOptions {
 
 
 /* Update Card */
+#containerMore, 
 #containerUpdate {
   position: fixed;
   display: flex;
@@ -149,6 +150,7 @@ a.btnOptions {
   transition: .4s;
 }
 
+#containerMore.activeMore,
 #containerUpdate.activeUser {
   opacity: 1;
   color: #000;

@@ -16,10 +16,12 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { db } from '../../Firebase/Firebase'
 import PublicationCard from '../../Components/PublicationCard/PublicationCard'
 import UpdateCard from '../../Components/UpdateCard/UpdateCard'
+import MoreAboutUser from '../../Components/MoreAboutUser/MoreAboutUser'
 
 const Dashboard = () => {
   const [active, setActive] = useState('')
   const [activeUser, setActiveUser] = useState('')
+  const [activeMore, setActiveMore] = useState('')
   const [myPublicatins, setMyPublicatins] = useState([])
   const [userConfigs, setUserConfigs] = useState([])
   const { user, logout } = UserAuth()
@@ -30,6 +32,15 @@ const Dashboard = () => {
     }
     else {
       setActive('')
+    }
+  }
+
+  const openSecondList = () => {
+    if (activeMore === '') {
+      setActiveMore(styles.activeMore)
+    }
+    else {
+      setActiveMore('')
     }
   }
 
@@ -126,7 +137,8 @@ const Dashboard = () => {
           <div className={`${styles.userList} ${active}`} onClick={openList}>
             <div className={styles.list}>
               <button onClick={openList} className={styles.btnOptions} id={styles.btnClose}><AiOutlineClose /></button>
-              <button onClick={openUpdateCard} className={styles.btnOptions}>Atualizar perfil</button>
+              <button onClick={openUpdateCard} className={styles.btnOptions}>Atualizar Perfil</button>
+              <button onClick={openSecondList} className={styles.btnOptions}>Mais Detalhes</button>
               <button onClick={signout} className={styles.btnOptions} id={styles.exit} ><ImExit />Sair</button>
             </div>
           </div>
@@ -143,6 +155,12 @@ const Dashboard = () => {
         <div id={styles.updateCard}>
           <UpdateCard id={userConfigs[0]?.id} />
           <AiOutlineClose onClick={openUpdateCard} className={styles.buttonClose} size={35} color='#ee3214' />
+        </div>
+      </div>
+      <div className={`${activeMore}`} id={styles.containerMore}>
+        <div id={styles.moreCard}>
+          <MoreAboutUser />
+          <AiOutlineClose onClick={openSecondList} className={styles.buttonClose} size={35} color='#ee3214' />
         </div>
       </div>
 
