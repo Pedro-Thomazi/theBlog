@@ -94,7 +94,6 @@ const Dashboard = () => {
     }
   }, [])
 
-  console.log(userConfigs[0]?.maritalStatus === undefined)
 
 
   return (
