@@ -138,7 +138,7 @@ const Dashboard = () => {
             <div className={styles.list}>
               <button onClick={openList} className={styles.btnOptions} id={styles.btnClose}><AiOutlineClose /></button>
               <button onClick={openUpdateCard} className={styles.btnOptions}>Atualizar Perfil</button>
-              <button onClick={openSecondList} className={styles.btnOptions}>Mais Detalhes</button>
+              {/* <button onClick={openSecondList} className={styles.btnOptions}>Mais Detalhes</button> */}
               <button onClick={signout} className={styles.btnOptions} id={styles.exit} ><ImExit />Sair</button>
             </div>
           </div>
@@ -157,12 +157,12 @@ const Dashboard = () => {
           <AiOutlineClose onClick={openUpdateCard} className={styles.buttonClose} size={35} color='#ee3214' />
         </div>
       </div>
-      <div className={`${activeMore}`} id={styles.containerMore}>
+      {/* <div className={`${activeMore}`} id={styles.containerMore}>
         <div id={styles.moreCard}>
           <MoreAboutUser />
           <AiOutlineClose onClick={openSecondList} className={styles.buttonClose} size={35} color='#ee3214' />
         </div>
-      </div>
+      </div> */}
 
       <section className={styles.content}>
         <h2>Minhas publicações</h2>
